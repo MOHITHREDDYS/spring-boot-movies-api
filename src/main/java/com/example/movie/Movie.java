@@ -13,27 +13,27 @@ public class Movie {
         this.leadActor = leadActor;
     }
 
-    public void setId(int movieId) {
+    public void setMovieId(int movieId) {
         this.movieId = movieId;
     }
 
-    public int getId() {
+    public int getMovieId() {
         return this.movieId;
     }
 
-    public void setName(String movieName) {
+    public void setMovieName(String movieName) {
         this.movieName = movieName;
     }
 
-    public String getName() {
+    public String getMovieName() {
         return this.movieName;
     }
 
-    public void setActor(String leadActor) {
+    public void setLeadActor(String leadActor) {
         this.leadActor = leadActor;
     }
 
-    public String getActor() {
+    public String getLeadActor() {
         return this.leadActor;
     }
 }
