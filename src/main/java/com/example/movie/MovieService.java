@@ -42,7 +42,7 @@ public class MovieService implements MovieRepository {
 
     @Override
     public Movie addMovie(Movie movie) {
-        movie.setId(uniqueId);
+        movie.setMovieId(uniqueId);
         movieList.put(uniqueId, movie);
         uniqueId++;
         return movie;
@@ -61,10 +61,10 @@ public class MovieService implements MovieRepository {
         Movie existingMovie = movieList.get(movieId);
         if (existingMovie == null)
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
-        if (movie.getName() != null)
-            existingMovie.setName(movie.getName());
-        if (movie.getActor() != null)
-            existingMovie.setActor(movie.getActor());
+        if (movie.getMovieName() != null)
+            existingMovie.setMovieName(movie.getMovieName());
+        if (movie.getLeadActor() != null)
+            existingMovie.setLeadActor(movie.getLeadActor());
         return existingMovie;
     }
 
